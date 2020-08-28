@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:text="${pictures.size()}"></div>
+<div th:each="picture : ${pictures}">
+    <p th:text="${picture.genreName}"></p>
+    <p th:text="${picture.genreId}"></p>
+</div>
+
+<!--<div>
+    <p th:text="${str}"></p>
+</div>-->
+
+<div th:each="picture : ${somePicture}">
+    <p th:text="${picture.title}"></p>
+    <div th:each="genreses : ${picture.genres}">
+        <div th:text="${genreses.genreId}"></div>
+        <div th:text="${genreses.genreName}"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" th:href="@{/still.css}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div class="container text-center block-title">
+        <h1>Chose which genre you want</h1>
+    </div>
+</div>
+<form method="post" action="filter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 " th:each="genre : ${listOfGenres}" >
+                <label class="checkbox-inline">
+                    <input type="checkbox" th:if="${not #lists.isEmpty(pressedGenres) && #lists.contains(pressedGenres, genre)}" th:value="${genre.genreId}" th:text="${genre.genreName}" name="name" checked="true">
+                    <input type="checkbox" th:unless="${not #lists.isEmpty(pressedGenres) && #lists.contains(pressedGenres, genre)}" th:value="${genre.genreId}" th:text="${genre.genreName}" name="name">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mar">Find</button>
+    </div>
+</form>
+
+
+<div>
+    <div class="container text-center block-title">
+        <h1 th:if="${not #lists.isEmpty(listOfMatchedMovies)}">Here are the movies selected according to your preferences</h1>
+    </div>
+</div>
+
+<div class="container-fluid text-center mar">
+    <div class="row">
+        <div class="col-sm-3" th:each="picture : ${listOfMatchedMovies}">
+            <a href="#" class="card-style">
+                <div class="img-container">
+                    <img  th:src="${picture.imagePath}">
+                </div>
+                <h3 th:text="${picture.title}"></h3>
+                <div th:each="genreses : ${picture.genres}">
+                    <p th:text="${genreses.genreName}"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="container text-center block-title">
+        <h1 th:if="${not #lists.isEmpty(listOfPictureSimilarGenres)}">Other films with similar genres</h1>
+    </div>
+</div>
+<div class="container-fluid text-center mar">
+    <div class="row">
+        <div class="col-sm-3" th:each="picture : ${listOfPictureSimilarGenres}">
+            <a href="#" class="card-style">
+                <div class="img-container">
+                    <img  th:src="${picture.imagePath}">
+                </div>
+                <h4 th:text="${picture.title}"></h4>
+                <div th:each="genreses : ${picture.genres}">
+                    <p th:text="${genreses.genreName}"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--<div th:each="genres : ${pressedGenres}">
+    <p th:text="${genres.genreName}"></p>
+
+    <input type="checkbox" th:if="${#lists.contains(listOfGenres, genres)}" th:value="${genres.genreId}" th:text="${genres.genreName}" name="name" checked="true">
+    <input type="checkbox" th:unless="${#lists.contains(listOfGenres, genres)}" th:value="${genres.genreId}" th:text="${genres.genreName}" name="name">
+</div>-->
+
+</body>
+</html>

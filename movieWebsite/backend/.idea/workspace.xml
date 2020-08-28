@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be8fcae5-c68c-4cc0-87d1-4d5d9dba103c" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YCVFm7Vp3HQkCklgQriVAeCtkQ" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringWebApplication">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="laba.Main" />
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="laba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="movie.website.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="movie.website.SpringWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SpringWebApplication" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be8fcae5-c68c-4cc0-87d1-4d5d9dba103c" name="Default Changelist" comment="" />
+      <created>1582446461527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582446461527</updated>
+      <workItem from="1582446467992" duration="16888000" />
+      <workItem from="1582550896081" duration="8334000" />
+      <workItem from="1582570042531" duration="3205000" />
+      <workItem from="1582614446899" duration="36000" />
+      <workItem from="1583325008404" duration="974000" />
+      <workItem from="1583326192036" duration="2381000" />
+      <workItem from="1583333104140" duration="4844000" />
+      <workItem from="1583348884395" duration="1544000" />
+      <workItem from="1583399815113" duration="2108000" />
+      <workItem from="1583411325356" duration="1155000" />
+      <workItem from="1583498554307" duration="9556000" />
+      <workItem from="1583511807347" duration="6377000" />
+      <workItem from="1583520602444" duration="2994000" />
+      <workItem from="1583566821108" duration="74000" />
+      <workItem from="1584865726008" duration="1225000" />
+      <workItem from="1585058564864" duration="1536000" />
+      <workItem from="1585064838662" duration="35000" />
+      <workItem from="1585144368075" duration="161000" />
+      <workItem from="1585146654815" duration="169000" />
+      <workItem from="1585153709125" duration="1594000" />
+      <workItem from="1585161772123" duration="1559000" />
+      <workItem from="1585239527240" duration="1137000" />
+      <workItem from="1585562054789" duration="21000" />
+      <workItem from="1585590957098" duration="3692000" />
+      <workItem from="1585659489543" duration="1652000" />
+      <workItem from="1585669420426" duration="10885000" />
+      <workItem from="1585742741471" duration="4861000" />
+      <workItem from="1588185758867" duration="1552000" />
+      <workItem from="1593184924794" duration="2080000" />
+      <workItem from="1593196822592" duration="273000" />
+      <workItem from="1593197591341" duration="687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

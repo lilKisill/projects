@@ -1,0 +1,40 @@
+.mar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pad {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-style{
+    color:black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-style:hover{
+    color: dimgrey;
+    text-decoration: none;
+}
+
+img:hover {
+    transform: scale(1.1);
+}

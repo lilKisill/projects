@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" th:href="@{/styles.css}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse nav-color">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" th:href="@{'/main'}">Movie Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{'/movies'}">Movies</a></li>
+                <li><a th:href="@{'/cartoons'}">Cartoons</a></li>
+                <li><a th:href="@{'/series'}">TV series</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a th:href="@{'/account'}"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="img-container">
+                <img  th:src="${picture.imagePath}">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <p th:text="${picture.pictureType} + ' ' + ${picture.limitations} + '+'"></p>
+            <h2 th:text="${picture.title}"></h2>
+            <hr>
+            <p th:text="'Year of release: ' + ${picture.releaseDate.year}"></p>
+            <p th:text="${picture.genres}"></p>
+            <!--<div th:each="genre : ${picture.genres}">
+                <p th:text="${genre.genreName}"></p>
+            </div>-->
+            <p th:text="'Rating: ' + ${picture.rating} + ' / 10'"></p>
+            <p>About film</p>
+            <p th:text="${picture.description}"></p>
+
+        </div>
+    </div>
+</div>
+
+<h2>Aspect ratio 4:3</h2>
+<div class="container">
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    </div>
+</div>
+
+
+</body>
+</html>
