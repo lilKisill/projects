@@ -1,0 +1,168 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: 1
+      author: lil_kisil
+      changes:
+        - createTable:
+            tableName: shares
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: amount
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: cod
+                  type: BIGINT
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: comment
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: release_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: value
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_value
+                  type: integer
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: history
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: comment
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: lil_kisil
+      comment: "Add information to db"
+      changes:
+        - insert:
+            tableName: shares
+            columns:
+              - column:
+                  name: cod
+                  value: "11111111"
+              - column:
+                  name: amount
+                  value: "10"
+              - column:
+                  name: value
+                  value: "75"
+              - column:
+                  name: total_value
+                  value: "750"
+              - column:
+                  name: comment
+                  value: "test 1"
+              - column:
+                  name: status
+                  value: "active"
+              - column:
+                  name: release_date
+                  value: "2020-09-01"
+        - insert:
+            tableName: shares
+            columns:
+              - column:
+                  name: cod
+                  value: "22222222"
+              - column:
+                  name: amount
+                  value: "100"
+              - column:
+                  name: value
+                  value: "25"
+              - column:
+                  name: total_value
+                  value: "2500"
+              - column:
+                  name: comment
+                  value: "test 2"
+              - column:
+                  name: status
+                  value: "active"
+              - column:
+                  name: release_date
+                  value: "2020-08-01"
+        - insert:
+            tableName: shares
+            columns:
+              - column:
+                  name: cod
+                  value: "33333333"
+              - column:
+                  name: amount
+                  value: "1"
+              - column:
+                  name: value
+                  value: "1000"
+              - column:
+                  name: total_value
+                  value: "1000"
+              - column:
+                  name: comment
+                  value: "test 3"
+              - column:
+                  name: status
+                  value: "active"
+              - column:
+                  name: release_date
+                  value: "2020-08-02"
+        - insert:
+            tableName: shares
+            columns:
+              - column:
+                  name: cod
+                  value: "44444444"
+              - column:
+                  name: amount
+                  value: "50"
+              - column:
+                  name: value
+                  value: "3"
+              - column:
+                  name: total_value
+                  value: "150"
+              - column:
+                  name: comment
+                  value: "test 4"
+              - column:
+                  name: status
+                  value: "active"
+              - column:
+                  name: release_date
+                  value: "2020-08-03"
